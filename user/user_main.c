@@ -70,7 +70,7 @@ static void ICACHE_FLASH_ATTR procTask(os_event_t *events)
 		                                                                    | ((3 & UART_BIT_NUM) << UART_BIT_NUM_S));
 		
 			//UART_SetBaudrate(UART0, 250000);
-			UART_SetBaudrate(UART0, 500000);
+			UART_SetBaudrate(UART0, DMX_BAUDRATE);
 
 			PIN_FUNC_SELECT( PERIPHS_IO_MUX_U0TXD_U, 3); //Set to GPIO.  
 			GPIO_OUTPUT_SET(GPIO_ID_PIN(1), 0 );
