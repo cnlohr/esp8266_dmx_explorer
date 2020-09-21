@@ -11,7 +11,17 @@ Instructions:
 
 Note: You can manually send DMX values using the webpage, or by flinging a UDP packet at the ESP on port 7777.
 
+Note: If you are using something like the ipixelled DMX-512 LED Light tubes http://ipixel-leds.com/index.php?id=489 You can use 500kbit/s, which will easily let you update at 60 FPS.  You can change it in user.cfg
+
+```
+#OPTS += -DDMX_BAUDRATE=500000
+OPTS += -DDMX_BAUDRATE=250000
+```
+
 DMX Will now be spewed out your "TX" pin.  You may need to either put on a line driver, or connect TX to D+ on DMX, and put two resistors in series across 3.3v, and center-tap for 1.65v, and connect to D- on DMX.
+
+![Schematic showing 270 Ohm resistors across 3.3v to GND](https://raw.githubusercontent.com/cnlohr/esp8266_dmx_explorer/master/schematic.png)
+
 
 
 
