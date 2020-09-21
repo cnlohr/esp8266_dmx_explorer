@@ -9,6 +9,10 @@ Instructions:
  * Reconnect to your own wifi. visit http://esp8266dmx.local
  * Start Colorchord's "netlight-dmx.conf"
 
+General notes:
+ * You can output arbitrary DMX-512 frames with this.
+ * Send a UDP packet to esp8266dmx.local on port 7777.  It will skip the first 3 bytes, then dump the rest of the frame out to the DMX channel.
+
 Note: You can manually send DMX values using the webpage, or by flinging a UDP packet at the ESP on port 7777.
 
 Note: If you are using something like the ipixelled DMX-512 LED Light tubes http://ipixel-leds.com/index.php?id=489 You can use 500kbit/s, which will easily let you update at 60 FPS.  You can change it in user.cfg
